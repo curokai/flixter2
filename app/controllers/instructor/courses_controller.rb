@@ -1,5 +1,5 @@
 class Instructor::CoursesController < ApplicationController
-   before_action :authenticate_user!
+   before_action :authenticate_user!, only: [:new, :create]
   def new
     @course=Course.new
   end
@@ -13,8 +13,6 @@ class Instructor::CoursesController < ApplicationController
     end
   end
 
-
-  
 
    def show
     @course = Course.find(params[:id])
