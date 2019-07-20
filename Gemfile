@@ -5,7 +5,9 @@ ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
-
+gem "mini_magick"
+gem "figaro"
+gem "fog-aws"
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -39,7 +41,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'popper_js', '~> 1.11.1'
 gem 'bootstrap', '4.0.0.alpha6'
-
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
