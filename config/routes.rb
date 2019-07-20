@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-   devise_for :users
+devise_for :users do
+  get '/users/sign_out' => 'devise/sessions#destroy'
+end
   root 'static_pages#index'
   resources :courses, only: [:index, :show]
   resources :lessons, only: [:show]
